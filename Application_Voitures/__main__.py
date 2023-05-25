@@ -1,6 +1,25 @@
 from cars import Car
 from trucks import Truck
 
+
+class MainApp:
+    def __init__(self):
+        self.running = False
+
+    def start(self):
+        self.running = True
+        print("L'application a demarre.")
+
+    def use(self):
+        if self.running:
+            print("L'application est en cours d'utilisation.")
+        else:
+            print("L'application n'est pas encore demarree.")
+
+    def quit(self):
+        self.running = False
+        print("L'application a ete quittee.")
+
 def print_menu():
     print("--- Gestion des vehicules ---")
     print("1. Ajouter une nouvelle voiture")
